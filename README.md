@@ -21,6 +21,13 @@ Run the function and display the results.
 ### Name: DEEPIKA P
 ### Register Number: 212223240024
 ```
+envdesc  = ['SFHS','HFFH','FFHF', 'HFGH']
+env = gym.make('FrozenLake-v1',desc=envdesc)
+init_state = env.reset()
+goal_state = 14
+P = env.env.P
+```
+```
 def value_iteration(P, gamma=1.0, theta=1e-10):
     V = np.zeros(len(P), dtype=np.float64)
     while True:
